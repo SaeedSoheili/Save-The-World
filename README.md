@@ -7,7 +7,7 @@ Live Demo: https://6478ff1557b7500bed88adcf--kaleidoscopic-khapse-e1ad55.netlify
 
 ## 🚀 To-Do List
 
-- [ ]  Complete The Game
+- [x]  Complete The Game
 - [ ]  Finish and optimize design
 - [ ]  Show Bookmarked Cards First of All
 - [ ]  Add Search Box
