@@ -177,36 +177,53 @@ html {
 .mortycard1 {
     transform: rotate(0deg);
     transition: 2s;
-
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .rickcard1 {
     transform: rotate(0deg);
     transition: 2s;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 
 }
 
 .mortycard2 {
     transform: rotate(0deg);
     transition: 2s;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 
 }
 
 .rickcard2 {
     transform: rotate(0deg);
     transition: 2s;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 
 }
 
 .mortycard3 {
     transform: rotate(-10deg);
     transition: 2s;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 
 }
 
 .rickcard3 {
     transform: rotate(0deg);
     transition: 2s;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 
 }
 
@@ -283,7 +300,7 @@ html {
 .mortyScore {
     position: absolute;
     top: 20px;
-    left: 580px;
+    left: 520px;
     color: white;
     font-size: 22px;
     font-weight: bolder;
@@ -292,7 +309,7 @@ html {
 .rickScore {
     position: absolute;
     top: 100px;
-    left: 580px;
+    left: 530px;
     color: white;
     font-size: 22px;
     font-weight: bolder;
