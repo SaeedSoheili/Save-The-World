@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save The World!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Geologica:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header START -->
+        <div class="headerDiv">
+            <div class="headerDivContents">
+                <h1 class="headerDivContentsTitle">Save The World!</h1>
+                <p class="headerDivContentsSubTitle">Rick has gone crazy and wants to destroy the planet! And again, as
+                    always, it's Morty's turn to stop
+                    Rick's devilish plans and save the Earth by uniting friends and enemies.</p>
+                <a href="#gameDiv">
+                    <div class="headerDivContentsBtnPlay">Lets Play</div>
+                </a>
+                <a href="#charactersDiv">
+                    <div class="headerDivContentsBtnInfo">Characters</div>
+                </a>
+                <div class="headerDivContentsEarth"></div>
+            </div>
+        </div>
+        <!-- Header FINISH -->
+
+        <!-- Game START -->
+        <div class="gameDiv" id="gameDiv">
+            <h2 class="gameDivTitle">How to Play?</h2>
+            <p class="gameDivSubTitle">When you click on the deck of cards, you will receive 3 cards as the defender
+                of the planet and 3
+                cards as the group of enemies of the earth, each group will receive points according to the table and
+                the winner of this battle will be determined.</p>
+            <table class="gameDivTableTeams">
+                <tr>
+                    <th colspan="2">Morty Team</th>
+                    <th colspan="2">Rick Team</th>
+
+                </tr>
+                <tr>
+                    <td>Human Species</td>
+                    <td>+10</td>
+                    <td>Gender Male</td>
+                    <td>+20</td>
+                </tr>
+                <tr>
+                    <td>Status Alive</td>
+                    <td>+15</td>
+                    <td>Status Dead</td>
+                    <td>+5</td>
+                </tr>
+            </table>
+
+            <div class="gameDivPart">
+                <div class="gameDivPartMorty">
+                    <div class="gameDivPartMortyCardPlace MortyCardPlace1"></div>
+                    <div class="gameDivPartMortyCardPlace MortyCardPlace2"></div>
+                    <div class="gameDivPartMortyCardPlace MortyCardPlace3"></div>
+                </div>
+
+                <span class="mortyScore">_ _ _</span>
+                <span class="rickScore">_ _ _</span>
+                <span class="winOrLoseStatus"></span>
+
+                <div class="gameDivPartCards mortycard1 mortycard"></div>
+                <div class="gameDivPartCards rickcard1 rickcard"></div>
+                <div class="gameDivPartCards mortycard2 mortycard"></div>
+                <div class="gameDivPartCards rickcard2 rickcard"></div>
+                <div class="gameDivPartCards mortycard3 mortycard"></div>
+                <div class="gameDivPartCards rickcard3 rickcard"></div>
+
+                <div class="gameDivPartHoverArea"></div>
+
+
+                <div class="gameDivPartRick">
+                    <div class="gameDivPartRickCardPlace RickCardPlace1"></div>
+                    <div class="gameDivPartRickCardPlace RickCardPlace2"></div>
+                    <div class="gameDivPartRickCardPlace RickCardPlace3"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Game FINISH -->
+
+        <!-- Characters START -->
+        <div class="charactersDiv" id="charactersDiv"></div>
+        <!-- Characters FINISH -->
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
