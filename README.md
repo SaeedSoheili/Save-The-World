@@ -3,7 +3,7 @@
 
 Its online website to have some fun and have your personal Rick & Morty Collection Cards with thier informations.
 
-Live Demo: https://6478ff1557b7500bed88adcf--kaleidoscopic-khapse-e1ad55.netlify.app/
+Live Demo: https://whimsical-melomakarona-38434f.netlify.app/
 
 ## 🚀 To-Do List
 
