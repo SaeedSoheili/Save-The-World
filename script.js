@@ -37,16 +37,49 @@ async function loadCharacters() {
 async function createCharacters(data) {
     createdCharectersElements = ""
     data.results.forEach(function (characterData) {
+        let statusLine;
+        let genderLine;
+        let speciesLine;
+
+        if (characterData.status == "Alive") {
+            statusLine = `<span style="color: green;" class="charactersDivCardDivStatus charactersDivCardDivInfo"><span class="charactersDivCardDivStatusSpan">Status:</span> ${characterData.status}</span>`
+        }
+        if (characterData.status == "Dead") {
+            statusLine = `<span style="color: red;" class="charactersDivCardDivStatus charactersDivCardDivInfo"><span class="charactersDivCardDivStatusSpan">Status:</span> ${characterData.status}</span>`
+        }
+        if (characterData.status !== "Dead" && characterData.status !== "Alive") {
+            statusLine = `<span class="charactersDivCardDivStatus charactersDivCardDivInfo"><span class="charactersDivCardDivStatusSpan">Status:</span> ${characterData.status}</span>`
+        }
+        if (characterData.gender == "Male") {
+            genderLine = `<span style="color: #30A2FF;" class="charactersDivCardDivGender charactersDivCardDivInfo"><span class="charactersDivCardDivGenderSpan">Gender:</span> ${characterData.gender}</span>`
+        }
+        if (characterData.gender == "Female") {
+            genderLine = `<span style="color: #F266AB;" class="charactersDivCardDivGender charactersDivCardDivInfo"><span class="charactersDivCardDivGenderSpan">Gender:</span> ${characterData.gender}</span>`
+        }
+        if (characterData.gender !== "Female" && characterData.gender !== "Male") {
+            genderLine = `<span class="charactersDivCardDivGender charactersDivCardDivInfo"><span class="charactersDivCardDivGenderSpan">Gender:</span> ${characterData.gender}</span>`
+        }
+        if (characterData.species == "Human") {
+            speciesLine = `<span style="color: #884A39;" class="charactersDivCardDivSpecies charactersDivCardDivInfo"><span class="charactersDivCardDivSpeciesSpan">Species:</span> ${characterData.species}</span>`
+        }
+        if (characterData.species == "Alien") {
+            speciesLine = `<span style="color: #FFB84C;" class="charactersDivCardDivSpecies charactersDivCardDivInfo"><span class="charactersDivCardDivSpeciesSpan">Species:</span> ${characterData.species}</span>`
+        }
+        if (characterData.species !== "Human" && characterData.species !== "Alien") {
+            speciesLine = `<span class="charactersDivCardDivSpecies charactersDivCardDivInfo"><span class="charactersDivCardDivSpeciesSpan">Species:</span> ${characterData.species}</span>`
+        }
+
         createdCharectersElements += `
-        <div class="charactersDivCardDiv">
-            <div style="background-image: url('${characterData.image}')" class="charactersDivCardDivImage"></div>
-            <div class="charactersDivaddFav addFav"></div>
-            <span class="charactersDivCardDivName charactersDivCardDivInfo">${characterData.name}</span>
-            <span class="charactersDivCardDivStatus charactersDivCardDivInfo">${characterData.status}</span>
-            <span class="charactersDivCardDivGender charactersDivCardDivInfo">${characterData.gender}</span>
-            <span class="charactersDivCardDivSpecies charactersDivCardDivInfo">${characterData.species}</span>
-        </div>
-        `
+            <div class="charactersDivCardDiv">
+                <div style="background-image: url('${characterData.image}')" class="charactersDivCardDivImage"></div>
+                <div class="charactersDivaddFav addFav"></div>
+                <span class="charactersDivCardDivName charactersDivCardDivInfo">${characterData.name}</span>
+                ${statusLine}
+                ${genderLine}
+                ${speciesLine}
+            </div>
+            `
+
     })
     charactersDiv.innerHTML += createdCharectersElements
     if (pageNumber < maxPages) {
@@ -226,3 +259,4 @@ hoverArea.addEventListener("click", function () {
     })
     setTimeout(setGameCardsOnClick, 3000)
 })
+
