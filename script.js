@@ -30,7 +30,6 @@ async function loadCharacters() {
         .then(data => {
             maxPages = data.info.pages
             createCharacters(data)
-            console.log(data)
         })
 }
 
@@ -74,6 +73,7 @@ async function createCharacters(data) {
                 <div style="background-image: url('${characterData.image}')" class="charactersDivCardDivImage"></div>
                 <div class="charactersDivaddFav addFav"></div>
                 <span class="charactersDivCardDivName charactersDivCardDivInfo">${characterData.name}</span>
+                <div class="brClassCards"></div>
                 ${statusLine}
                 ${genderLine}
                 ${speciesLine}
@@ -159,35 +159,137 @@ async function setGameCardsData() {
                 });
             })
     }
-    console.log(gameCardsData)
 }
 
 async function setGameCardsOnClick() {
-    for (let i = 0; i <= 5; i++) {
-        switch (i) {
-            case 0:
-                mortyCard1.style.backgroundImage = "url(" + gameCardsData[i].cardImage + ")"
-                break;
-            case 1:
-                mortyCard2.style.backgroundImage = "url(" + gameCardsData[i].cardImage + ")"
-                break;
-            case 2:
-                mortyCard3.style.backgroundImage = "url(" + gameCardsData[i].cardImage + ")"
-                break;
-            case 3:
-                rickCard1.style.backgroundImage = "url(" + gameCardsData[i].cardImage + ")"
-                break;
-            case 4:
-                rickCard2.style.backgroundImage = "url(" + gameCardsData[i].cardImage + ")"
-                break;
-            case 5:
-                rickCard3.style.backgroundImage = "url(" + gameCardsData[i].cardImage + ")"
-                break;
-        }
+
+    cards[0].classList.toggle("bigCards");
+    setTimeout(function () {
+        cards[0].classList.toggle("bigCards");
+        setTimeout(function () {
+            cards[0].classList.toggle("smallCards");
+            setTimeout(function () {
+                cards[0].classList.toggle("smallCards");
+                setTimeout(function () {
+                    cards[0].classList.toggle("bigCards");
+                    setTimeout(function () {
+                        cards[0].classList.toggle("bigCards");
+                    }, 1000);
+                }, 1000);
+            }, 1000);
+        }, 1000);
+    }, 1000);
+
+    cards[1].classList.toggle("bigCards");
+    setTimeout(function () {
+        cards[1].classList.toggle("bigCards");
+        setTimeout(function () {
+            cards[1].classList.toggle("smallCards");
+            setTimeout(function () {
+                cards[1].classList.toggle("smallCards");
+                setTimeout(function () {
+                    cards[1].classList.toggle("bigCards");
+                    setTimeout(function () {
+                        cards[1].classList.toggle("bigCards");
+                    }, 1000);
+                }, 1000);
+            }, 1000);
+        }, 1000);
+    }, 1000);
+
+    cards[2].classList.toggle("bigCards");
+    setTimeout(function () {
+        cards[2].classList.toggle("bigCards");
+        setTimeout(function () {
+            cards[2].classList.toggle("smallCards");
+            setTimeout(function () {
+                cards[2].classList.toggle("smallCards");
+                setTimeout(function () {
+                    cards[2].classList.toggle("bigCards");
+                    setTimeout(function () {
+                        cards[2].classList.toggle("bigCards");
+                    }, 1000);
+                }, 1000);
+            }, 1000);
+        }, 1000);
+    }, 1000);
+
+    cards[3].classList.toggle("smallCards");
+    setTimeout(function () {
+        cards[3].classList.toggle("smallCards");
+        setTimeout(function () {
+            cards[3].classList.toggle("bigCards");
+            setTimeout(function () {
+                cards[3].classList.toggle("bigCards");
+                setTimeout(function () {
+                    cards[3].classList.toggle("smallCards");
+                    setTimeout(function () {
+                        cards[3].classList.toggle("smallCards");
+                    }, 1000);
+                }, 1000);
+            }, 1000);
+        }, 1000);
+    }, 1000);
+
+    cards[4].classList.toggle("smallCards");
+    setTimeout(function () {
+        cards[4].classList.toggle("smallCards");
+        setTimeout(function () {
+            cards[4].classList.toggle("bigCards");
+            setTimeout(function () {
+                cards[4].classList.toggle("bigCards");
+                setTimeout(function () {
+                    cards[4].classList.toggle("smallCards");
+                    setTimeout(function () {
+                        cards[4].classList.toggle("smallCards");
+                    }, 1000);
+                }, 1000);
+            }, 1000);
+        }, 1000);
+    }, 1000);
+
+    cards[5].classList.toggle("smallCards");
+    setTimeout(function () {
+        cards[5].classList.toggle("smallCards");
+        setTimeout(function () {
+            cards[5].classList.toggle("bigCards");
+            setTimeout(function () {
+                cards[5].classList.toggle("bigCards");
+                setTimeout(function () {
+                    cards[5].classList.toggle("smallCards");
+                    setTimeout(function () {
+                        cards[5].classList.toggle("smallCards");
+                        for (let i = 0; i <= 5; i++) {
+                            switch (i) {
+                                case 0:
+                                    mortyCard1.style.backgroundImage = "url(" + gameCardsData[i].cardImage + ")"
+                                    break;
+                                case 1:
+                                    mortyCard2.style.backgroundImage = "url(" + gameCardsData[i].cardImage + ")"
+                                    break;
+                                case 2:
+                                    mortyCard3.style.backgroundImage = "url(" + gameCardsData[i].cardImage + ")"
+                                    break;
+                                case 3:
+                                    rickCard1.style.backgroundImage = "url(" + gameCardsData[i].cardImage + ")"
+                                    break;
+                                case 4:
+                                    rickCard2.style.backgroundImage = "url(" + gameCardsData[i].cardImage + ")"
+                                    break;
+                                case 5:
+                                    rickCard3.style.backgroundImage = "url(" + gameCardsData[i].cardImage + ")"
+                                    break;
+                            }
+                        }
+                        setTimeout(finalCardScores, 1000)
+                    }, 1000);
+                }, 1000);
+            }, 1000);
+        }, 1000);
+    }, 1000);
 
 
-    }
-    setTimeout(finalCardScores, 1000)
+
 }
 
 async function finalCardScores() {
@@ -209,13 +311,15 @@ async function finalCardScores() {
             rickScore += 5
         }
     }
-    mortyScoreElement.innerHTML = "Morty Score: " + mortyScore
-    rickScoreElement.innerHTML = "Rick Score: " + rickScore
+    mortyScoreElement.innerHTML = "Morty Score: <span style='color: #27E1C1;'>" + mortyScore + "</span>"
+    rickScoreElement.innerHTML = "Rick Score: <span style='color: #537FE7;'>" + rickScore + "</span>"
+    winOrLoseElement.style.left = "545px"
     if (mortyScore > rickScore) {
-        winOrLoseElement.innerHTML = "You Won!"
+        winOrLoseElement.innerHTML = "You <span style='color: green;'>Won!</span>"
     } else if (mortyScore < rickScore) {
-        winOrLoseElement.innerHTML = "You Lose!"
+        winOrLoseElement.innerHTML = "You <span style='color: red;'>Lose!</span>"
     } else if (mortyScore == rickScore) {
+        winOrLoseElement.style.left = "570px"
         winOrLoseElement.innerHTML = "Draw!"
     }
 }
