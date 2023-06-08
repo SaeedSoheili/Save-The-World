@@ -8,6 +8,7 @@ Live Demo: https://whimsical-melomakarona-38434f.netlify.app/
 ## 🚀 To-Do List
 
 - [x]  Complete The Game
-- [ ]  Finish and optimize design
+- [x]  Finish and optimize design
 - [ ]  Show Bookmarked Cards First of All
 - [ ]  Add Search Box
+- [ ]  Responsive with mobile
