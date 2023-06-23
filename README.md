@@ -7,7 +7,7 @@ Rick has gone crazy and wants to destroy the planet! And again, as always, it's 
 
 
 
-Live Demo: https://whimsical-melomakarona-38434f.netlify.app/
+Live Demo: [https://whimsical-melomakarona-38434f.netlify.app/](https://savetheworldsite.netlify.app/)
 
 ## 🚀 To-Do List
 
