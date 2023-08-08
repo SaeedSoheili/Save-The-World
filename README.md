@@ -21,6 +21,6 @@ Live Demo: https://savetheworldsite.netlify.app
 
 I welcome collaboration and support to enhance the mini project, seeking assistance to optimize code, improve functionality, and create a remarkable outcome through collaboration.
 
-- [MinusMarigold98](https://www.discordapp.com/users/382244660208205824) - Frontend Developer
+- [Saeed Soheili](https://www.discordapp.com/users/382244660208205824) - Frontend Developer
 
 Get in touch with me anytime, im always here to help.
